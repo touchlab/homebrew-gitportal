@@ -9,5 +9,5 @@ cask "gitportal" do
   url "https://doppldocs.s3.amazonaws.com/gitportal-#{version}-#{arch}",
       verified: "doppldocs.s3.amazonaws.com/"
 
-  binary "gitportal"
+  binary "gitportal-#{version}-#{arch}", target: "gitportal"
 end
