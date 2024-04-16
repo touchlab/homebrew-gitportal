@@ -23,7 +23,7 @@ class Gitportal < Formula
 
   def install
     suffix = (Hardware::CPU.arch == :x86_64) ? "X64" : "Arm64"
-    system "brew", "install", "--cask", "graalvm-jdk"
+    system "brew", "install", "--cask", "graalvm/tap/graalvm-jdk21"
     system "gradle", "shadowJar"
     system "native-image", "-jar", "core/build/libs/core-0.3-all.jar", "--no-fallback", "-H:+UnlockExperimentalVMOptions", "-H:ReflectionConfigurationFiles=core/reflectionconfig.json", "-H:+ReportUnsupportedElementsAtRuntime", "gitportal"
     bin.install "gitportal" => "gitportal"
