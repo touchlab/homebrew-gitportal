@@ -17,7 +17,7 @@ class Gitportal < Formula
   end
 
   depends_on "gradle" => :build
-  depends_on "graalvm-jdk" => :build
+  # depends_on "graalvm-jdk" => :build
   depends_on xcode: ["14.1", :build]
   depends_on :macos
 
