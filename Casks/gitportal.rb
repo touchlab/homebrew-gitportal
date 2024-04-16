@@ -3,8 +3,8 @@ cask "gitportal" do
   folder = on_arch_conditional arm: "aarch64", intel: "x86_64"
 
   version "0.3.4"
-  sha256 arm:   "81eab945a33622fc156951e804024d23aa9a745c06743b4947215ed9303ad1c4",
-         intel: "ede541af151487f60eb518e310d20dad1a973f3dbe9ff78d782dd29b14ba2946"
+  sha256 arm:   "6081667bd773d223af88c9361d7cfc1f7293690acb65e5b9346ee7923810db62",
+         intel: "29efd0e0dbdb22b59fa06db573b8b36a671054c6fff9ec7798a1cc2df3c1bdf2"
 
   url "https://doppldocs.s3.amazonaws.com/gitportal-#{version}-#{arch}",
       verified: "doppldocs.s3.amazonaws.com/"
