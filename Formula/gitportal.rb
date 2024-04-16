@@ -23,7 +23,7 @@ class Gitportal < Formula
   def install
     suffix = (Hardware::CPU.arch == :x86_64) ? "X64" : "Arm64"
     system "gradle", "--no-daemon", "linkReleaseExecutableMacos#{suffix}"
-    bin.install "build/bin/macos#{suffix}/releaseExecutable/cli.kexe" => "gitportal"
+    bin.install "cli/build/bin/macos#{suffix}/releaseExecutable/cli.kexe" => "gitportal"
   end
 
   # test do
