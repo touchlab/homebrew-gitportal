@@ -2,8 +2,8 @@ class Gitportal < Formula
   desc "GitPortal CLI Tool"
   homepage "https://github.com/touchlab/GitPortal"
   url "https://github.com/touchlab/GitPortal.git",
-      tag:      "0.4.1",
-      revision: "afdcee1bb17ef087df29e83f02d5055000053d33"
+      tag:      "0.5.1",
+      revision: "fbca24f6d119c33a447e7346388e82379c72fb3e"
   license "Apache-2.0"
   head "https://github.com/touchlab/GitPortal.git", branch: "main"
 
