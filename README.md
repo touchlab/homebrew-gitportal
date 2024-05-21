@@ -7,6 +7,6 @@ For more info on GitPortal see [GitPortal for KMP Tutorial](https://touchlab.co/
 ## How do I install GitPortal?
 
 ```shell
-brew tap touchlab/homebrew-gitportaltap
+brew tap touchlab/homebrew-gitportal
 brew install gitportal
 ```
