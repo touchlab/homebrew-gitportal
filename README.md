@@ -1,11 +1,12 @@
 # Touchlab GitPortalTap
 
-## How do I install these formulae?
+Tap for Homebrew GitPortal installation.
 
-`brew install touchlab/gitportaltap/<formula>`
+For more info on GitPortal see [GitPortal for KMP Tutorial](https://touchlab.co/gitportal-for-kmp-tutorial-repo-ci-setup).
 
-Or `brew tap touchlab/gitportaltap` and then `brew install <formula>`.
+## How do I install GitPortal?
 
-## Documentation
-
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+```shell
+brew tap touchlab/homebrew-gitportaltap
+brew install gitportal
+```
