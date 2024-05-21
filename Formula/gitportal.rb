@@ -1,11 +1,11 @@
 class Gitportal < Formula
   desc "GitPortal CLI Tool"
-  homepage "https://github.com/touchlab/GitPortal"
-  url "https://github.com/touchlab/GitPortal.git",
+  homepage "https://github.com/touchlab/GitPortalCli"
+  url "https://github.com/touchlab/GitPortalCli.git",
       tag: "0.5.20",
       revision: "49d5123489ac4a079376865051d6d6c69668fcbd"
   license "Apache-2.0"
-  head "https://github.com/touchlab/GitPortal.git", branch: "main"
+  head "https://github.com/touchlab/GitPortalCli.git", branch: "main"
 
   depends_on "gradle" => :build
   depends_on xcode: ["14.1", :build]
@@ -14,7 +14,7 @@ class Gitportal < Formula
   def install
     suffix = (Hardware::CPU.arch == :x86_64) ? "X64" : "Arm64"
     system "gradle", "--no-daemon", "linkReleaseExecutableMacos#{suffix}"
-    bin.install "cli/build/bin/macos#{suffix}/releaseExecutable/cli.kexe" => "gitportal"
+    bin.install "cli-build/build/bin/macos#{suffix}/releaseExecutable/cli-build.kexe" => "gitportal"
   end
 
   test do
