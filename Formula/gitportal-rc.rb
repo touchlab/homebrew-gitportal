@@ -3,7 +3,7 @@ class GitportalRc < Formula
   homepage "https://github.com/touchlab/GitPortalCli"
   url "https://github.com/touchlab/GitPortalCli.git",
       tag: "0.6.0",
-      revision: "4b08ea39427432108ec5eb25f8efa6e7013618b9"
+      revision: "e236115c809788dc7de2e791624bf8985f18f363"
   license "Apache-2.0"
   head "https://github.com/touchlab/GitPortalCli.git", branch: "main"
 
