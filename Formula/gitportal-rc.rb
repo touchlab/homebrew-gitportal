@@ -1,5 +1,5 @@
 class GitportalRc < Formula
-  desc "Repo-linking for KMP and other source-code sharing platforms - CLI Tool - Release Candidate"
+  desc "Repo-linking for KMP and other source-code sharing platforms - RC"
   homepage "https://github.com/touchlab/GitPortalCli"
   url "https://github.com/touchlab/GitPortalCli.git",
        tag: "0.6.21",
