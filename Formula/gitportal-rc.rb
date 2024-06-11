@@ -2,8 +2,8 @@ class GitportalRc < Formula
   desc "GitPortal CLI Tool - Release Candidate"
   homepage "https://github.com/touchlab/GitPortalCli"
   url "https://github.com/touchlab/GitPortalCli.git",
-      tag: "0.6.16",
-      revision: "2720eefb48048fdc50dae358d263524c49d30c2a"
+      tag: "0.6.17",
+      revision: "e5420ebfe010e604a26a71cff5b15e3970dafbad"
   license "Apache-2.0"
   head "https://github.com/touchlab/GitPortalCli.git", branch: "main"
 
