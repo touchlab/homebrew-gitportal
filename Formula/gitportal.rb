@@ -1,9 +1,9 @@
 class Gitportal < Formula
-  desc "GitPortal CLI Tool"
+  desc "Repo-linking for KMP and other source-code sharing platforms - CLI Tool"
   homepage "https://github.com/touchlab/GitPortalCli"
   url "https://github.com/touchlab/GitPortalCli.git",
-      tag: "0.6.21",
-      revision: "3a335080e03659fa2b8c4b0ead5e9316d41757c3"
+       tag:      "0.6.21",
+       revision: "3a335080e03659fa2b8c4b0ead5e9316d41757c3"
   license "Apache-2.0"
   head "https://github.com/touchlab/GitPortalCli.git", branch: "main"
 
@@ -18,7 +18,7 @@ class Gitportal < Formula
   end
 
   test do
-    output = shell_output(bin/"gitportal --help").split('\n')[0]
+    output = shell_output(bin / "gitportal --help").split('\n')[0]
     assert_match "Usage: gitportal options_list", output
   end
 end
