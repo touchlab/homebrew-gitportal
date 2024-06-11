@@ -18,7 +18,7 @@ class Gitportal < Formula
   end
 
   test do
-    output = shell_output(bin/"gitportal --help")
+    output = shell_output(bin/"gitportal --help").split('\n')[0]
     assert_match "Usage: gitportal options_list", output
   end
 end
