@@ -7,6 +7,11 @@ class Gitportal < Formula
   license "Apache-2.0"
   head "https://github.com/touchlab/GitPortalCli.git", branch: "main"
 
+  bottle do
+    root_url "https://github.com/touchlab/homebrew-gitportal/releases/download/gitportal-0.6.22"
+    sha256 cellar: :any_skip_relocation, ventura: "0fc13d821910bee1dce20641dca5935cf54d94b9752e2fecb80a7a473519cecd"
+  end
+
   depends_on "gradle" => :build
   depends_on xcode: ["14.1", :build]
   depends_on :macos
