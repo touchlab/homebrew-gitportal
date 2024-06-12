@@ -13,7 +13,7 @@ class Gitportal < Formula
     sha256 cellar: :any_skip_relocation, ventura:      "48a563b137901b0f71f13dc88272afcc02c787cbfd29909a654f3608989209d0"
   end
 
-  depends_on "getsentry/tools/sentry-cli" => :build
+  depends_on "getsentry/tools/sentry-cli" => [:test]
   depends_on "gradle" => :build
   depends_on xcode: ["14.1", :build]
   depends_on :macos
