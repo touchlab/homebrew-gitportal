@@ -19,8 +19,9 @@ jobs:
         uses: Homebrew/actions/git-user-config@master
 
       - uses: actions/download-artifact@v4
-        path: dsyms/
-        pattern: "*dsyms*"
+        with:
+          path: dsyms/
+          pattern: "*dsyms*"
 
       - name: Upload dSYM files
         run: |
