@@ -37,8 +37,15 @@ jobs:
       - run: brew install getsentry/tools/sentry-cli
 
       - name: Upload bottles as artifact
-        if: always() && github.event_name == 'pull_request'
+        if: always()
         uses: actions/upload-artifact@v3
         with:
           name: bottles
           path: '*.bottle.*'
+
+      - name: Upload dsyms as artifact
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: dsyms
+          path: '/tmp/*.zip'
