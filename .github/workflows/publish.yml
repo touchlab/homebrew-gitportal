@@ -18,13 +18,15 @@ jobs:
       - name: Set up git
         uses: Homebrew/actions/git-user-config@master
 
-      - uses: actions/download-artifact@v4
+      - name: Download dSYM Files
+        uses: actions/download-artifact@v4
         with:
           path: dsyms/
           pattern: "*dsyms*"
 
       - name: Upload dSYM files
         run: |
+          find .
           cd dsyms/
           unzip '*.zip'
           cd ..
