@@ -2,15 +2,15 @@ class Gitportal < Formula
   desc "CLI Tool"
   homepage "https://github.com/touchlab/GitPortalCli"
   url "https://github.com/touchlab/GitPortalCli.git",
-      tag:      "0.6.23",
-      revision: "2ee1a78c7c2ef90f827244b6a3ab09d2cfc8ce2e"
+      tag:      "0.6.30",
+      revision: "acc74f04e62499ec99a1ae6ba6e333f34c8c9542"
   license "Apache-2.0"
   head "https://github.com/touchlab/GitPortalCli.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/touchlab/homebrew-gitportal/releases/download/gitportal-0.6.23"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "b6558f6202fb8ef8daecba742e6b7a0f7f7a5d4b9ce44bfe40400362f521cee6"
-    sha256 cellar: :any_skip_relocation, ventura:      "48a563b137901b0f71f13dc88272afcc02c787cbfd29909a654f3608989209d0"
+    root_url "https://github.com/touchlab/homebrew-gitportal/releases/download/gitportal-0.6.30"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "56040386c8e0ca61e56cc49b27d90bbdd8a212bebf3cdeabb1d0e01630016ceb"
+    sha256 cellar: :any_skip_relocation, ventura:      "33546165f21cd8a02f43462c2d24535b13ec6042ec3aba9c78543e56cd7c0dc4"
   end
 
   depends_on "gradle" => :build
