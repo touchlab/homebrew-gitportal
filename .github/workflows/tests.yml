@@ -15,6 +15,8 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
 
+      - run: brew install getsentry/tools/sentry-cli
+
       - name: Cache Homebrew Bundler RubyGems
         id: cache
         uses: actions/cache@v3
@@ -30,11 +32,7 @@ jobs:
       - run: brew test-bot --only-tap-syntax
 
       - run: brew test-bot --only-formulae
-#        if: github.event_name == 'pull_request'
-
-      - run: ls -lA
-      - run: find .
-      - run: brew install getsentry/tools/sentry-cli
+        if: github.event_name == 'pull_request'
 
       - name: Upload bottles as artifact
         if: always() && github.event_name == 'pull_request'
