@@ -25,6 +25,9 @@ jobs:
 
       - name: Upload dSYM files
         run: |
+          cd dsyms/
+          unzip '*.zip'
+          cd ..
           brew install getsentry/tools/sentry-cli
           sentry-cli debug-files upload --auth-token ${{ secrets.SENTRY_AUTH_TOKEN }} \
           --include-sources \
