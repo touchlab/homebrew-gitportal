@@ -18,6 +18,19 @@ jobs:
       - name: Set up git
         uses: Homebrew/actions/git-user-config@master
 
+      - uses: actions/download-artifact@v4
+        path: dsyms/
+        pattern: "*dsyms*"
+
+      - name: Upload dSYM files
+        run: |
+          brew install getsentry/tools/sentry-cli
+          sentry-cli debug-files upload --auth-token ${{ secrets.SENTRY_AUTH_TOKEN }} \
+          --include-sources \
+          --org touchlab \
+          --project gitportalcli \
+          dsyms/
+
       - name: Pull bottles
         env:
           HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
