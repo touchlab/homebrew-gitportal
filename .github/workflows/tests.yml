@@ -15,8 +15,6 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
 
-      - run: brew install getsentry/tools/sentry-cli
-
       - name: Cache Homebrew Bundler RubyGems
         id: cache
         uses: actions/cache@v3
@@ -36,6 +34,7 @@ jobs:
 
       - name: Upload dSYM files
         run: |
+          brew install getsentry/tools/sentry-cli
           sentry-cli debug-files upload --auth-token ${{ secrets.SENTRY_AUTH_TOKEN }} \
           --include-sources \
           --org touchlab \
