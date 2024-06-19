@@ -8,9 +8,9 @@ class Gitportal < Formula
   head "https://github.com/touchlab/GitPortalCli.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/touchlab/homebrew-gitportal/releases/download/gitportal-0.7.2"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "6abbe821959e1568ff0d971029b547d3a674f7e6897729ba181dcac30fec5a01"
-    sha256 cellar: :any_skip_relocation, ventura:      "f2a71bd327677341f1a7fddb8346fe18b2870e1075d05f59b6e16c710fac7c3d"
+    root_url "https://github.com/touchlab/homebrew-gitportal/releases/download/gitportal-0.7.6"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "fd2592c7b29092d6858df8238f0d30f48df0ec0963b31856d1f99aae4dea8709"
+    sha256 cellar: :any_skip_relocation, ventura:      "6facfab81802166598e74517c5a42a4113092daf5efb2358bf3cc7aa7c0e711e"
   end
 
   depends_on "gradle" => :build
